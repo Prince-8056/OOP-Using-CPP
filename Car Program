@@ -1,0 +1,53 @@
+//  Created by Prince Gajera on 24/01/2024.
+// Car Program with Class
+#include<iostream>
+using namespace std;
+class Car
+{
+private:
+    char car_name[100];
+    char car_model [100];
+    char car_color[100];
+    int car_mfg;
+    double car_price;
+public:
+    void input_car_details();
+    void display_car_details();
+    
+};
+
+void Car::input_car_details()
+{
+    cout<<"Please enter car details:"<<endl;
+    cout<<"Car Name:"<<endl;
+    cin>>car_name;
+    cout<<"Car Model:"<<endl;
+    cin>>car_model;
+    cout<<"Car Colour"<<endl;
+    cin>>car_color;
+    cout<<"Car Mfg Year:"<<endl;
+    cin>>car_mfg;
+    cout<<"Car Price:"<<endl;
+    cin>>car_price;
+}
+void Car::display_car_details()
+{
+    cout<<"---Car Details--- "<<endl<<endl;
+    cout<<"Car Name :"<<" "<<car_name<<endl;
+    cout<<"Car Model:"<<car_model<<" "<<endl;
+    cout<<"Car Color:"<<" "<<car_color<<endl;
+    cout<<"Car MFGYR:"<<" "<<car_mfg<<endl;
+    cout<<"Car Price:"<<car_price<<endl<<endl;
+    cout<<"----Thank You...!!----"<<endl;
+    
+}
+int main()
+{
+    Car car1;
+    car1.input_car_details();
+    car1.display_car_details();
+    
+    
+    
+    return 0;
+}
