@@ -1,0 +1,79 @@
+//Banking Program with Class
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+
+using namespace std;
+
+class bank
+{
+    int Account_No;
+    char Account_Name[100], Accout_Type[100];
+    float Balance;
+
+public:
+    bank(int accout_no, char *accout_name, char *accout_type, float balance) // Parameterized Constructor
+    {
+        Account_No = account_no;
+        strcpy(Account_Name, accout_name);
+        strcpy(Accout_Type, accout_type);
+        Balance = balance;
+    }
+    void input();
+    void deposit();
+    void withdraw();
+    void display();
+};
+void bank::input()
+{
+     int accout_no;
+    char accout_name[100], accout_type[100];
+    float balance;
+    cout << "\n Enter Details: \n";
+    cout << "-----------------------";
+    cout << "\n Accout No. ";
+    cin >> accout_no;
+    cout << "\n Name : ";
+    cin >> accout_name;
+    cout << "\n Account Type : ";
+    cin >> accout_type;
+    cout << "\n Balance : ";
+    cin >> balance;
+}
+void bank::deposit() // depositing an amount
+{
+    int damt1;
+    cout << "\n Enter Deposit Amount = ";
+    cin >> damt1;
+    Balance += damt1;
+}
+void bank::withdraw() // withdrawing an amount
+{
+    int wamt1;
+    cout << "\n Enter Withdraw Amount = ";
+    cin >> wamt1;
+    if (wamt1 > Balance)
+    {
+        cout << "\n Cannot Withdraw Amount";
+    }
+    Balance -= wamt1;
+}
+void bank::display() // displaying the details
+{
+    cout << "\n ----------------------";
+    cout << "\n Accout No. : " << Account_Name;
+    cout << "\n Name : " << Account_Name;
+    cout << "\n Account Type : " << Accout_Type;
+    cout << "\n Balance : " << Balance;
+}
+int main()
+{
+   
+
+    bank B1; // object is created
+    B1.input();
+    B1.deposit();                             //
+    B1.withdraw();                            // calling member functions
+    B1.display();                             //
+    return 0;
+}
