@@ -1,0 +1,27 @@
+//  Created by Prince Gajera on 24/01/2024.
+//  Default Constructor
+#include<iostream>
+using namespace std;
+class Dept
+{
+    int dept_id;
+    string dept_name;
+public:
+    Dept();
+    void display();
+};
+Dept:: Dept()
+{
+        dept_id=111;
+        dept_name="Computer Science";
+        
+}
+ void Dept::display()
+    {
+        cout<<dept_id<<"\t"<<dept_name<<endl;
+    }
+int main()
+{
+    Dept d;
+    d.display();
+}
