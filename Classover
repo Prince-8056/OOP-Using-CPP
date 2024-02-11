@@ -1,0 +1,66 @@
+#include<iostream>
+
+using namespace std;
+
+class employee
+{
+    private:
+            string name;
+            int age;
+            float salary;
+   public:
+                employee()
+                {
+                    name="Not Set";
+                    age=0;
+                    salary=0;
+                }
+
+                employee(string n,int a)
+                {
+                    name=n;
+                    age=a;
+                    salary=0;   
+                }
+
+                
+                employee(string n,int a,float s)
+                {
+                    name=n;
+                    age=a;
+                    salary=s;   
+                }
+
+                string getname()
+                {
+                    return name;
+                }
+
+                int getage()
+                {
+                    return age;
+                }
+
+                float getsalary()
+                {
+                    return salary;
+                }
+
+                void display()
+                {
+                    cout<<"Name :"<<name<<endl;
+                    cout<<"Age :"<<age<<endl;
+                    cout<<"Salary :"<<salary<<endl;
+                }
+};
+
+int main(){
+    employee e1;
+    e1.display();
+    employee e2("Prince Gajera",18);
+    e2.display();
+    employee e3("Prince Gajera",18,80000);
+    e3.display();
+
+    return 0;
+}
