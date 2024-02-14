@@ -1,0 +1,71 @@
+#include<iostream>
+
+using namespace std;
+
+class university
+{
+    private:
+
+    public:
+        class faculty
+        {
+            private:
+                int id;
+                string name;
+            
+            public:
+                void input_detail()
+                {
+                    cout<<"Enter Faculty Details"<<endl;
+                    cout<<"Enter Id :";
+                    cin>>id;
+                    cout<<"Enter Name :";
+                    cin>>name;
+                }
+
+                void display_detail()
+                {
+                    cout<<"Id \t Name"<<endl;
+                    cout<<id<<"\t"<<name<<endl;
+                }
+                    
+        };
+
+         class student
+        {
+            private:
+                int id;
+                string name;
+            
+            public:
+                void input()
+                {
+                    cout<<"Enter Student Details"<<endl;
+                    cout<<"Enter Id :";
+                    cin>>id;
+                    cout<<"Enter Name :";
+                    cin>>name;
+                }
+
+                void display()
+                {
+                    cout<<"Id \t Name"<<endl;
+                    cout<<id<<"\t"<<name<<endl;
+                }
+                    
+        };
+};
+
+int main()
+{
+    university::faculty fact;
+    university::student stud;
+
+    fact.input_detail();
+    fact.display_detail();
+
+    stud.input();
+    stud.display();
+
+    return 0;
+}
