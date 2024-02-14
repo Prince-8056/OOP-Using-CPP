@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class Car {
+  private:
+    double length;
+    double height;
+
+  public:
+
+    Car(double len, double hgt) {
+      length = len;
+      height = hgt;
+    }
+
+    Car(Car &obj) {
+      length = obj.length;
+      height = obj.height;
+    }
+
+    double calculateArea() {
+      return length * height;
+    }
+};
+
+int main() {
+
+  Car car1(10.5, 8.6);
+  Car car2 = car1;
+
+  cout << "Area of Car 1: " << car1.calculateArea() << endl;
+  cout << "Area of Car 2: " << car2.calculateArea();
+
+  return 0;
+}
