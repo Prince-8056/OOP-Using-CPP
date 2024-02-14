@@ -1,0 +1,73 @@
+#include<iostream>
+
+using namespace std;
+
+class university
+{
+    private:
+          int id;
+          string fname;
+           int rno;
+           string name;
+            
+    public:
+        class faculty
+        {
+            private:
+              
+            public:
+                void input_detail(university* uni)
+                {
+                    cout<<"Enter Faculty Details"<<endl;
+                    cout<<"Enter Id :";
+                    cin>>uni->id;
+                    cout<<"Enter Name :";
+                    cin>>uni->fname;
+                }
+
+                void display_detail(university* uni)
+                {
+                    cout<<"Id \t Name"<<endl;
+                    cout<<uni->id<<"\t"<<uni->fname<<endl;
+                }
+                    
+        };
+
+         class student
+        {
+            private:
+               
+            
+            public:
+                void input(university* uni)
+                {
+                    cout<<"Enter Student Details"<<endl;
+                    cout<<"Enter Id :";
+                    cin>>uni->rno;
+                    cout<<"Enter Name :";
+                    cin>>uni->name;
+                }
+
+                void display(university* uni)
+                {
+                    cout<<"Id \t Name"<<endl;
+                    cout<<uni->rno<<"\t"<<uni->name<<endl;
+                }
+                    
+        };
+};
+
+int main()
+{
+    university uniobj;
+    university::faculty fact;
+    university::student stud;
+
+    fact.input_detail(&uniobj);
+    fact.display_detail(&uniobj);
+
+    stud.input(&uniobj);
+    stud.display(&uniobj);
+
+    return 0;
+}
